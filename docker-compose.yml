@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx:
-    image: evild/alpine-nginx:1.11.2-libressl
+    image: nginx/1.14-alpine-perl
     container_name: wordpress_nginx
     restart: always
     volumes:
@@ -14,7 +14,7 @@ services:
     networks:
       - front
   php:
-    image: evild/alpine-wordpress:4.5.3
+    image: wordpress/5.0.2-fpm-alpine
     container_name: wordpress_php
     restart: always
     volumes:
